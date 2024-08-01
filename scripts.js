@@ -6,7 +6,7 @@ function pulsate(button) {
     }, 500);
 }
 
-// Desplazamiento suave (si fuera necesario, por ejemplo, si tienes secciones adicionales)
+// Desplazamiento suave 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
