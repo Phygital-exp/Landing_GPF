@@ -1,0 +1,176 @@
+body {
+    background-color: #0b0f16;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.button {
+    background-color: #1b1e25;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 300px;
+    height: 60px;
+}
+
+.button-icon {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px; /* Ajusta el tamaño para que sean cuadrados */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Ajusta la imagen para que se ajuste al tamaño del contenedor */
+}
+
+.button:hover {
+    transform: scale(1.05);
+    border-color: #00c2c7;
+}
+
+.linktree {
+    margin-top: 50px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linktree img {
+    margin-left: 5px;
+    width: 20px;
+}
+
+.pulse {
+    animation: pulse-animation 0.5s;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Imagen circular principal */
+.circular-image {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: 150px; /* Debe ser el mismo valor que width para que sea perfectamente circular */
+    border-radius: 50%;
+    overflow: hidden; /* Asegura que cualquier contenido adicional sea recortado */
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsionar */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: block;
+}
+
+/* Imágenes circulares en los botones */
+.button-icon {
+    width: 40px; /* Ajusta el tamaño según sea necesario */
+    height: 40px; /* Debe ser el mismo valor que width para que sea perfectamente circular */
+    border-radius: 50%;
+    overflow: hidden; /* Asegura que cualquier contenido adicional sea recortado */
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsionar */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alinea la imagen con el texto del botón */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilos generales para el footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna por defecto */
+    align-items: center;
+}
+
+.logo-container {
+    margin-bottom: 10px; /* Añade espacio debajo del logo */
+}
+
+.logo-container img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+    max-height: 60px;
+    display: block;
+}
+
+.contact-info {
+    text-align: center; /* Centra el texto en el contenedor */
+    flex-grow: 1;
+}
+
+.contact-info p {
+    margin: 5px 0; /* Espacio entre los párrafos */
+}
+
+.material-icons {
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Estilos responsivos */
+@media (min-width: 600px) {
+    .footer-content {
+        flex-direction: row; /* Cambia a una fila en pantallas más anchas */
+        justify-content: space-between;
+    }
+
+    .logo-container, .contact-info {
+        margin-bottom: 0; /* Quita el margen inferior en modo fila */
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-container {
+        display: none; /* Oculta el logo en pantallas pequeñas */
+    }
+}
+
+.button-link {
+    text-decoration: none; /* Elimina el subrayado */
+}
